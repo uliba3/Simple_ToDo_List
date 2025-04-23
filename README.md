@@ -1,4 +1,4 @@
-# Simple Todo List Chrome Extension
+# Simple ToDo List Chrome Extension
 
 A lightweight and user-friendly Chrome extension for managing your daily tasks with a clean and intuitive interface.
 
