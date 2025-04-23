@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Todo List</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simple Todo List</h1>
+        <div class="task-controls">
+            <div class="input-row task-item">
+                <div class="task-container input-container">
+                    <div class="task-dates">
+                        <input type="datetime-local" id="startDate" class="start-date" placeholder="Start Date">
+                        <span class="date-separator"> ~ </span>
+                        <input type="datetime-local" id="dueDate" class="due-date" placeholder="Due Date">
+                    </div>
+                    <input type="text" id="taskInput" class="task-text" placeholder="Add a new task...">
+                </div>
+                <button id="addButton" class="add-button">+</button>
+            </div>
+            <div class="sort-control">
+                <label for="sortSelect">Sort by:</label>
+                <select id="sortSelect" class="sort-select">
+                    <option value="none">No sorting</option>
+                    <option value="start-date">Start Date</option>
+                    <option value="due-date">Due Date</option>
+                </select>
+            </div>
+        </div>
+        <ul id="taskList" class="task-list"></ul>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html> 

@@ -1,0 +1,270 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 450px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f8f9fa;
+    color: #2c3e50;
+}
+
+.container {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #2c3e50;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Task controls styling */
+.task-controls {
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.input-row {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 5px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.input-row:focus-within {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-row .start-date,
+.input-row .due-date {
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    font-size: 13px;
+    color: #666;
+    transition: all 0.2s ease;
+}
+
+.input-row .start-date:hover,
+.input-row .due-date:hover {
+    background-color: #f0f0f0;
+    border-color: #d0d0d0;
+}
+
+.input-row .task-text {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.input-row .task-text:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.input-row .add-button {
+    padding: 8px 12px;
+    margin-left: 8px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.input-row .add-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+}
+
+.sort-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    white-space: nowrap;
+    padding: 0 4px;
+}
+
+.sort-control label {
+    font-size: 13px;
+    color: #666;
+    font-weight: 500;
+}
+
+.sort-select {
+    padding: 6px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 13px;
+    background-color: white;
+    color: #2c3e50;
+    transition: all 0.2s ease;
+}
+
+.sort-select:hover {
+    border-color: #d0d0d0;
+}
+
+.sort-select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* Task list styling */
+.task-list {
+    list-style: none;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 4px;
+}
+
+/* Custom scrollbar */
+.task-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.task-list::-webkit-scrollbar-track {
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.task-list::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding-right: 5px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    background-color: white;
+    cursor: move;
+    transition: all 0.2s ease;
+}
+
+.task-item:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.task-text {
+    font-size: 14px;
+    font-weight: 500;
+    flex: 1;
+    min-width: 0;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #2c3e50;
+}
+
+.task-text:hover {
+    background-color: #f8f9fa;
+}
+
+.task-dates {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.start-date, .due-date {
+    white-space: nowrap;
+    width: 160px;
+    text-align: center;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.start-date:hover, .due-date:hover {
+    background-color: #f8f9fa;
+    color: #2c3e50;
+}
+
+.date-separator {
+    color: #cbd5e0;
+}
+
+.delete-btn {
+    padding: 6px 10px;
+    margin-left: 8px;
+    background-color: #feb2b2;
+    color: #c53030;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.delete-btn:hover {
+    background-color: #fc8181;
+    color: #9b2c2c;
+}
+
+.dragging {
+    opacity: 0.7;
+    background-color: #f8f9fa;
+    border: 2px dashed #cbd5e0;
+}
+
+/* Edit mode styling */
+.edit-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    padding: 8px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+}
+
+.task-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.input-container {
+    gap: 5px;
+}
