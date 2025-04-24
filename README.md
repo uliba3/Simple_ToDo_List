@@ -73,3 +73,7 @@ This project is open source and available under the MIT License.
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Privacy Policy
+
+For information about how we handle your data, please see our [Privacy Policy](PRIVACY.md).
